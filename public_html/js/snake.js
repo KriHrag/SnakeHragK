@@ -10,6 +10,11 @@ var screenHeight;
 
 gameInitialize();
 snakeInitialize();
+foodInitialize();
+setInterval (gameLoop, 1000/30);
+
+gameInitialize();
+snakeInitialize();
 gameDraw();
 snakeDraw();
 snakeUpdate();
@@ -31,7 +36,10 @@ function gameInitialize() {
 }
 
 function gameLoop() {
-    
+    gameDraw();
+    snakeUpdate();
+    snakeDraw();
+    foodDraw();
 }
 
 function gameDraw() {
@@ -42,7 +50,7 @@ function gameDraw() {
 function snakeInitialize() {
     snake = [];
     snakeLength = 5;
-    snakeSize = 30;
+    snakeSize = 20;
     
     for(var index = snakeLength - 1; index >= 0; index--) {
        snake.push( {
@@ -68,7 +76,7 @@ function snakeUpdate() {
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
     snakeTail.y = snakeHeadY;
-    snakee.unshift(snakeTail);
+    snake.unshift(snakeTail);
 }
 
 function foodInitialize() {
