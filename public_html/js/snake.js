@@ -1,12 +1,22 @@
+/*------------------------------------------------------------------------------------------------------------------------------
+ * Variables
+ * -----------------------------------------------------------------------------------------------------------------------------
+ */
+
 var snake;
 var snakeLength;
-var snakeSize;
+var snakeSize;  
 
 var food;
 
 var context;
 var screenWidth ;
 var screenHeight;
+
+/*-----------------------------------------------------------------------------------------------------------------------------
+ * Executing Game Code
+ * ----------------------------------------------------------------------------------------------------------------------------
+ */
 
 gameInitialize();
 snakeInitialize();
@@ -87,6 +97,6 @@ function foodInitialize() {
 }
 
 function foodDraw() {
-    context.fillStyle = "white";
-    context.fillRect(food.x, food.y, snakesize, snakesize);
+    context.fillStyle = "orange";
+    context.fillRect(food.x, food.y, snakeSize, snakeSize);
 }
