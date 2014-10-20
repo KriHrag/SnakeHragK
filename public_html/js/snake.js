@@ -100,3 +100,11 @@ function foodDraw() {
     context.fillStyle = "orange";
     context.fillRect(food.x, food.y, snakeSize, snakeSize);
 }
+
+function setFoodPosition(){
+    var randomX =Math.floor(Math.random() * screenWidth);
+    var randomY =Math.floor(Math.random() * screenHeight);
+    
+    food.x = randomX;
+    food.Y = randomY;
+}
