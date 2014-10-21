@@ -57,10 +57,16 @@ function gameDraw() {
     context.fillRect(0, 0, screenWidth, screenHeight); 
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------
+ * Snake Functions
+ *-----------------------------------------------------------------------------------------------------------------------------
+ */
+
 function snakeInitialize() {
     snake = [];
     snakeLength = 5;
     snakeSize = 20;
+    snakeDirection = "down";
     
     for(var index = snakeLength - 1; index >= 0; index--) {
        snake.push( {
@@ -81,7 +87,7 @@ function snakeUpdate() {
     var snakeHeadX = snake[0].x;
     var snakeHeadY = snake[0].y;        
     
-    snakeHeadX++;
+    snakeHeadY++;
     
     var snakeTail = snake.pop();
     snakeTail.x = snakeHeadX;
@@ -89,11 +95,17 @@ function snakeUpdate() {
     snake.unshift(snakeTail);
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------
+ * Food Functions
+ * ----------------------------------------------------------------------------------------------------------------------------
+ */
+
 function foodInitialize() {
     food = {
         x: 0,
         y: 0
     };
+    setFoodPosition();
 }
 
 function foodDraw() {
@@ -106,5 +118,5 @@ function setFoodPosition(){
     var randomY =Math.floor(Math.random() * screenHeight);
     
     food.x = randomX;
-    food.Y = randomY;
+    food.y = randomY;
 }
