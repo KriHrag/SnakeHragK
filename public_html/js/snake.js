@@ -23,14 +23,7 @@ snakeInitialize();
 foodInitialize();
 setInterval (gameLoop, 1000/30);
 
-gameInitialize();
-snakeInitialize();
-gameDraw();
-snakeDraw();
-snakeUpdate();
-snakeDraw();
-snakeUpdate();
-snakeDraw();
+
 
 
 
@@ -43,6 +36,7 @@ function gameInitialize() {
     
     canvas.width = screenWidth;
     canvas.height = screenHeight;
+    document.addEventListener("keydown", keyboardHandler);
 }
 
 function gameLoop() {
@@ -124,4 +118,8 @@ function setFoodPosition(){
     
     food.x = randomX;
     food.y = randomY;
+}
+
+function keyboardHandler(event) {
+    console.log(event);
 }
