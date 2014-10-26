@@ -84,8 +84,16 @@ function snakeUpdate() {
     if(snakeDirection == "down")  {
         snakeHeadY++;
     }
-    else {
+    else  if(snakeDirection == "right") {
         snakeHeadX++;
+    }
+    
+    else  if(snakeDirection == "up") {
+        snakeHeadY--;
+    }
+    
+    else if(snakeDirection == "left") {
+        snakeHeadX--;
     }
     
     var snakeTail = snake.pop();
@@ -122,4 +130,12 @@ function setFoodPosition(){
 
 function keyboardHandler(event) {
     console.log(event);
+    
+    if(event.keyCode == "39") {
+        snakeDirection = "right"; 
+    }
+    
+    else if(event.keyCode == "40") {
+        snakeDirection = "down";
+    }
 }
