@@ -13,8 +13,8 @@ var food;
 var context;
 var screenWidth ;
 var screenHeight;
-var checkFoodCollision;
-
+var checkFoodCollisions;
+var checkWallCollisions;
 /*-----------------------------------------------------------------------------------------------------------------------------
  * Executing Game Code
  * ----------------------------------------------------------------------------------------------------------------------------
@@ -84,6 +84,7 @@ function snakeUpdate() {
     var snakeHeadY = snake[0].y;    
     
     checkFoodCollisions(snakeHeadX, snakeHeadY);
+    checkWallCollisions(snakeHeadX, snakeHeadY)
     
     if(snakeDirection == "down")  {
         snakeHeadY++;
@@ -165,5 +166,11 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
             y: 0
         });
         snakeLength++;
+    }
+}
+
+function checkWallCollisions(snakeHeadX, snakeHeadY) {
+    if(snakeHeadX * snakeSize >= screenWidth) {
+        console.log("Wall Collision");
     }
 }
