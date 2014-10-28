@@ -9,11 +9,11 @@ and open the template in the editor.
         <title>Halloween Horror  - By HK</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    </head> 
     <body>
         <canvas id="game-screen"></canvas>
         <script type="text/javascript">
- /*------------------------------------------------------------------------------------------------------------------------------
+            /*------------------------------------------------------------------------------------------------------------------------------
  * Variables
  * -----------------------------------------------------------------------------------------------------------------------------
  */
@@ -37,7 +37,7 @@ var checkWallCollisions;
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval (gameLoop, 50);
+setInterval (gameLoop, 20);
 
 
 
@@ -194,6 +194,6 @@ function checkWallCollisions(snakeHeadX, snakeHeadY) {
         console.log("Wall Collision");
     }
 }
-        </script>
+</script>
     </body>
 </html>
