@@ -15,6 +15,8 @@ var screenWidth ;
 var screenHeight;
 var checkFoodCollisions;
 var checkWallCollisions;
+
+var gameState;
 /*-----------------------------------------------------------------------------------------------------------------------------
  * Executing Game Code
  * ----------------------------------------------------------------------------------------------------------------------------
@@ -176,7 +178,16 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
 }
 
 function checkWallCollisions(snakeHeadX, snakeHeadY) {
-    if(snakeHeadX * snakeSize >= screenWidth) {
+    if(snakeHeadX * snakeSize >= screenWidth || snakeHeadX * snakeSize < 0) {
         console.log("Wall Collision");
     }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------
+ *  Game State Handling
+ *  ----------------------------------------------------------------------------------------------------------------------------
+ */
+
+function setState(state) {
+    gameState = state;
 }

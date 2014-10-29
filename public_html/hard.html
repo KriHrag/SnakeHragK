@@ -75,7 +75,7 @@ function gameDraw() {
 function snakeInitialize() {
     snake = [];
     snakeLength = 3;
-    snakeSize = 20;
+    snakeSize = 10;
     snakeDirection = "down";
     
     for(var index = snakeLength - 1; index >= 0; index--) {
@@ -190,10 +190,14 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
 }
 
 function checkWallCollisions(snakeHeadX, snakeHeadY) {
-    if(snakeHeadX * snakeSize >= screenWidth) {
+    if(snakeHeadX * snakeSize >= screenWidth || snakeHeadX * snakeSize < 0) {
         console.log("Wall Collision");
     }
 }
+
+/*
+ * a hard level
+ */
 </script>
     </body>
 </html>
