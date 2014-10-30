@@ -12,7 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <canvas id="game-screen"></canvas>
-        <script type="text/javascript">
+        <script type="medium/javascript">
             /*------------------------------------------------------------------------------------------------------------------------------
  * Variables
  * -----------------------------------------------------------------------------------------------------------------------------
@@ -29,6 +29,9 @@ var screenWidth ;
 var screenHeight;
 var checkFoodCollisions;
 var checkWallCollisions;
+
+var gameState;
+var gameOverMenu;
 /*-----------------------------------------------------------------------------------------------------------------------------
  * Executing Game Code
  * ----------------------------------------------------------------------------------------------------------------------------
@@ -54,6 +57,10 @@ function gameInitialize() {
     canvas.height = screenHeight;
     document.addEventListener("keydown", keyboardHandler);
 }
+
+  gameOverMenu = document.getElementById("gameOver");
+    
+    setState("PLAY");
 
 function gameLoop() {
     gameDraw();
@@ -192,9 +199,28 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
 function checkWallCollisions(snakeHeadX, snakeHeadY) {
     if(snakeHeadX * snakeSize >= screenWidth || snakeHeadX * snakeSize < 0) {
         console.log("Wall Collision");
-         setSnake("GAME OVER");
-    }
+         setSnake("GAME OVER")   
+     }
 }
+
+/*------------------------------------------------------------------------------------------------------------------------------
+ *  Game State Handling
+ *  ----------------------------------------------------------------------------------------------------------------------------
+ */
+
+function setState(state) {
+    gameState = state;
+     showMenu(state);
+}
+
+function displayMenu(menu) {
+ menu.style.visibility = "visible";   
+}
+
+function showMenu(state) {
+    if(state == "GAME OVER") {
+        displayMenu(gameOverMenu);
+    }
 
 /*
  * a medium level
