@@ -11,4 +11,9 @@ body {
     background: url(https://lh4.ggpht.com/yJe6HqfvYKO2ej-qfsoWf50T71o4346gXkF6T66FMXBAjJ5DhMt7buBDESUMqYaeIqI=w300.jpg); 
 }
 
+#gameOver {
+    position: absolute;
+    visibility: hidden;
+}
+
 // tried some stuff //
