@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Halloween Horror  - By HK</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head> 
-    <body>
-        <canvas id="game-screen"></canvas>
-        <script src="js/snake.js">
-            /*------------------------------------------------------------------------------------------------------------------------------
+            /*------------------------------------------------------------------------------------------------------------------------------------
  * Variables
- * -----------------------------------------------------------------------------------------------------------------------------
+ * -----------------------------------------------------------------------------------------------------------------------------------------------
  */
 
 var snake;
@@ -31,7 +16,7 @@ var checkFoodCollisions;
 var checkWallCollisions;
 
 var gameState;
-var gameOverMenu;v
+var gameOverMenu;
 /*-----------------------------------------------------------------------------------------------------------------------------
  * Executing Game Code
  * ----------------------------------------------------------------------------------------------------------------------------
@@ -40,7 +25,7 @@ var gameOverMenu;v
 gameInitialize();
 snakeInitialize();
 foodInitialize();
-setInterval (gameLoop, 20);
+setInterval (gameLoop, 10);
 
 
 
@@ -70,7 +55,7 @@ function gameLoop() {
 }
 
 function gameDraw() {
-    context.fillStyle = "rgb(174, 0, 222)";
+    context.fillStyle = "rgb(0, 0, 0)";
     context.fillRect(0, 0, screenWidth, screenHeight); 
 }
 
@@ -82,7 +67,7 @@ function gameDraw() {
 function snakeInitialize() {
     snake = [];
     snakeLength = 3;
-    snakeSize = 10;
+    snakeSize = 5;
     snakeDirection = "down";
     
     for(var index = snakeLength - 1; index >= 0; index--) {
@@ -95,7 +80,7 @@ function snakeInitialize() {
 
 function snakeDraw() {
     for(var index = 0; index < snake.length; index++) {
-        context.fillStyle = "black";
+        context.fillStyle = "purple";
         context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
     }
 }
@@ -221,10 +206,9 @@ function showMenu(state) {
     if(state == "GAME OVER") {
         displayMenu(gameOverMenu);
     }
+}
 
 /*
- * a hard level
+ * an extreme level
+ * 
  */
-</script>
-    </body>
-</html>

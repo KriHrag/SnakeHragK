@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>Halloween Horror  - By HK</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head> 
-    <body>
-        <canvas id="game-screen"></canvas>
-        <script src="js/snake.js">
-            /*------------------------------------------------------------------------------------------------------------------------------
+     /*------------------------------------------------------------------------------------------------------------------------------
  * Variables
  * -----------------------------------------------------------------------------------------------------------------------------
  */
@@ -31,7 +16,7 @@ var checkFoodCollisions;
 var checkWallCollisions;
 
 var gameState;
-var gameOverMenu;v
+var gameOverMenu;
 /*-----------------------------------------------------------------------------------------------------------------------------
  * Executing Game Code
  * ----------------------------------------------------------------------------------------------------------------------------
@@ -82,7 +67,7 @@ function gameDraw() {
 function snakeInitialize() {
     snake = [];
     snakeLength = 3;
-    snakeSize = 10;
+    snakeSize = 15;
     snakeDirection = "down";
     
     for(var index = snakeLength - 1; index >= 0; index--) {
@@ -199,8 +184,8 @@ function checkFoodCollisions(snakeHeadX, snakeHeadY) {
 function checkWallCollisions(snakeHeadX, snakeHeadY) {
     if(snakeHeadX * snakeSize >= screenWidth || snakeHeadX * snakeSize < 0) {
         console.log("Wall Collision");
-         setSnake("GAME OVER");
-    }
+         setSnake("GAME OVER")   
+     }
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------
@@ -220,11 +205,4 @@ function displayMenu(menu) {
 function showMenu(state) {
     if(state == "GAME OVER") {
         displayMenu(gameOverMenu);
-    }
-
-/*
- * a hard level
- */
-</script>
-    </body>
-</html>
+    
