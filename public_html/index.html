@@ -1,36 +1,39 @@
-    <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+ <html>
     <head>
-        <title>Halloween Horror  - By HK</title>
+        <title>HragK - Snake</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>u
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head> 
-    <body>
+        <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+        <link type="text/css" rel="stylesheet" href="CSS/Style.css">
+    </head>
+    <body id="index">
+        <!--Jumbotron at top of starting screen with text and buttons-->
+        <div class="jumbotron">
+            <h1>SNAKE</h1>
+            <h3>By: Hrag Krikorian</h3>
+            <h2>Welcome to Holloween Horror</h2>
+            <h2>Select Difficulty</h2>
+            <!--Easy mode button-->
+            <div class="btn-group">
+                <a href="easy.html" class="btn btn-primary btn-lg btn-block">EASY</a>
+            </div>
+            <!--Medium mode button-->
+            <div class="btn-group">
+                <a href="medium.html" type="button" class="btn btn-primary btn-lg btn-block">MEDIUM</a>
+            </div>
+            <!--Hard mode button-->
+            <div class="btn-group">
+                <a href="hard.html" type="button" class="btn btn-primary btn-lg btn-block">HARD</a>
+            </div>
+            <!--Extreme mode button-->
+            <div class="btn-group">
+                <a href="extreme.html" type="button" class="btn btn-primary btn-lg btn-block">EXTREME</a>
+            </div>
+            
+            
+        </div>
         
-        <section id="gameOver">
-            <h1 class="title">GAME OVER! </h1>
-            <h3 id="restartButton">Restart?</h3>
-            </section>
-        <section id="levelsmenu">
-            <a id="levels" href="easy.html">HALLOWEEN HORROR</a>
-            <a id="levels" href="medium.html">MEDIUM</a>
-            <a id="levels" href="hard.html">HARD</a>
-            <a id="levels" href="extreme.html">HALLOWEEN HORROR </a>
-        </section>
-            <canvas id="game-screen"></canvas>
-            
-            <script src="js/snake.js"></script>
-            
-            
-            
+       
     </body>
 </html>
-
-<!-- LINKED them together -->
