@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Extreme Snake Level</title>
+        <title>Halloween Horror Snake Level</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
@@ -10,7 +10,7 @@
         <section id="PLAYHUD">
             <h2 id="scoreboard"></h2>
         </section>
-        <canvas id="game-screen" width="800" height="500" style="border:3px solid #123456"></canvas>
+        <canvas id="game-screen" width="950" height="600" style="border:3px solid #123456"></canvas>
         <section  id="gameOver">
             <h1 class="title">GAME OVER YOU SUCK, SORRY.</h1>
             <h2 id="restartButton">PLAY AGAIN</h2>
@@ -49,8 +49,8 @@
                 var canvas = document.getElementById("game-screen");
                 context = canvas.getContext("2d");
 
-                screenWidth = 800;
-                screenHeight = 500;
+                screenWidth = 950;
+                screenHeight = 600;
 
                 document.addEventListener("keydown", keyboardHandler);
 

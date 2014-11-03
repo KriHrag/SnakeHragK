@@ -14,7 +14,7 @@ body{
 }
 
 .jumbotron {
-    text-align: center;
+    text-align: left;
     text-shadow: 4px 4px 4px #123456;
 }
 
@@ -48,7 +48,7 @@ h2{
     border-radius: 10px;
     color: #123456;
     margin-top: 0px;
-    margin-left: 657px;
+    margin-left: 600px;
 }
 
 #restartButton:hover{
